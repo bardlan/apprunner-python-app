@@ -35,6 +35,10 @@ def delete_movie(title, year):
 def home():
   return render_template('index.html')
 
+#Invoke DynamoDB Page
+@app.route('/invoke_dynamoDB')
+def invoke_dynamoDB():
+  return render_template('invoke_dynamoDB.html')
 
 # POST /api/movie data: {name:}
 @app.route('/api/movie', methods=['POST'])
